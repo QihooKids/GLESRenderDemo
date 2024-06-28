@@ -14,6 +14,11 @@ void release(long handle) {
     delete render;
 }
 
+unsigned int textureId(long handle){
+    auto* render = reinterpret_cast<Render *>(handle);
+    return render->textureId(0);
+}
+
 void render(long handle, unsigned char *data, int width, int height) {
     auto* render = reinterpret_cast<Render *>(handle);
     render->render(data, width, height);

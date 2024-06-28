@@ -49,3 +49,7 @@ void Render::render(unsigned char *data, GLint width, GLint height) {
     glDrawArrays(GL_TRIANGLE_STRIP, 0 ,4);
     glUseProgram(0);
 }
+
+unsigned int Render::textureId(int i) {
+    return mTextureIds[i];
+}

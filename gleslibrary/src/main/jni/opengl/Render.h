@@ -17,6 +17,7 @@ public:
 
 public:
     void render(unsigned char *data, GLint width, GLint height);
+    unsigned int  textureId(int i);
 private:
     unsigned int mWidth;
     unsigned int mHeight;

@@ -6,6 +6,9 @@
 //
 #define LOG_TAG "Render_JNI"
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+
+jint textureId(long i);
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -29,9 +32,15 @@ Java_com_daguo_dayi_jni_GLESRender_release(JNIEnv *env, jobject thiz, jlong hand
     release((long)handle);
 }
 
+jint JNICALL
+Java_com_daguo_dayi_jni_GLESRender_textureId(JNIEnv *env, jobject thiz, jlong handle) {
+    return textureId((long)handle);
+}
+
 #ifdef __cplusplus
 }
 #endif
+
 
 
 

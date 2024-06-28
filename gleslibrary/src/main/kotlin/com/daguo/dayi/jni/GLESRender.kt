@@ -7,5 +7,7 @@ class GLESRender {
 
     external fun init(width:Int, height:Int):Long
     external fun render(handle:Long, byteArray: ByteArray, width: Int, height: Int)
+    external fun textureId(handle:Long):Int
     external fun release(handle:Long)
+
 }
